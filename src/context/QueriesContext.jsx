@@ -8,7 +8,7 @@ export const useQueries = () => useContext(QueriesContext);
 
 // === set API base here ===
 // change to "http://localhost:5000/api/queries" if your backend uses /api/queries
-const API_BASE = "http://localhost:5000/api/contact";
+const API_BASE = "https://legalease-backend-y5nn.onrender.com/api/contact";
 
 export const QueriesProvider = ({ children }) => {
   const [queries, setQueries] = useState([]);
