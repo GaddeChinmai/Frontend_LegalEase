@@ -117,13 +117,13 @@ const RightsPage = () => {
     try {
       if (editRight) {
         await axios.put(
-          `http://localhost:5000/api/rights/${editRight._id}`,
+          `https://legalease-backend-y5nn.onrender.com/api/rights/${editRight._id}`,
           formData,
           { headers: { Authorization: `Bearer ${token}` } }
         );
         alert("Right updated successfully!");
       } else {
-        await axios.post("http://localhost:5000/api/rights", formData, {
+        await axios.post("https://legalease-backend-y5nn.onrender.com/api/rights", formData, {
           headers: { Authorization: `Bearer ${token}` },
         });
         alert("Right added successfully!");
@@ -142,7 +142,7 @@ const RightsPage = () => {
   const handleDelete = async (id) => {
     if (!window.confirm("Are you sure you want to delete this right?")) return;
     try {
-      await axios.delete(`http://localhost:5000/api/rights/${id}`, {
+      await axios.delete(`https://legalease-backend-y5nn.onrender.com/api/rights/${id}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       alert("Right deleted successfully!");
