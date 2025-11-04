@@ -83,7 +83,7 @@ const RightsPage = () => {
   // Fetch rights
   const fetchRights = async () => {
     try {
-      const res = await axios.get("https://legal-ease-backend-one.vercel.app/api/rights");
+      const res = await axios.get("https://backend-legal-ease.vercel.app/api/rights");
       setRights([...predefinedRights, ...res.data]);
     } catch (err) {
       console.error(err.response?.data || err);
@@ -117,13 +117,13 @@ const RightsPage = () => {
     try {
       if (editRight) {
         await axios.put(
-          `https://legal-ease-backend-one.vercel.app/api/rights/${editRight._id}`,
+          `https://backend-legal-ease.vercel.app/api/rights/${editRight._id}`,
           formData,
           { headers: { Authorization: `Bearer ${token}` } }
         );
         alert("Right updated successfully!");
       } else {
-        await axios.post("https://legal-ease-backend-one.vercel.app/api/rights", formData, {
+        await axios.post("https://backend-legal-ease.vercel.app/api/rights", formData, {
           headers: { Authorization: `Bearer ${token}` },
         });
         alert("Right added successfully!");
@@ -142,7 +142,7 @@ const RightsPage = () => {
   const handleDelete = async (id) => {
     if (!window.confirm("Are you sure you want to delete this right?")) return;
     try {
-      await axios.delete(`https://legal-ease-backend-one.vercel.app/api/rights/${id}`, {
+      await axios.delete(`https://backend-legal-ease.vercel.app/api/rights/${id}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       alert("Right deleted successfully!");
