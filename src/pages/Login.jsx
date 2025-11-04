@@ -18,7 +18,7 @@ const Login = () => {
     if (!form.email || !form.password) return alert("Enter email and password");
 
     try {
-      const res = await axios.post("https://legal-ease-backend-one.vercel.app/api/auth/login", {
+      const res = await axios.post("https://backend-legal-ease.vercel.app/api/auth/login", {
         email: form.email.trim().toLowerCase(),
         password: form.password,
       });
