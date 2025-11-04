@@ -8,7 +8,7 @@ export const useQueries = () => useContext(QueriesContext);
 
 // === set API base here ===
 // change to "http://localhost:5000/api/queries" if your backend uses /api/queries
-const API_BASE = "https://legal-ease-backend-one.vercel.app/api/contact";
+const API_BASE = "https://backend-legal-ease.vercel.app/api/contact";
 
 export const QueriesProvider = ({ children }) => {
   const [queries, setQueries] = useState([]);
