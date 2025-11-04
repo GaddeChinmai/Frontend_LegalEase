@@ -26,9 +26,6 @@ const Home = () => {
     link.rel = "stylesheet";
     link.href =
       "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css";
-    link.integrity =
-      "sha512-4oVap6zkD6n3p6WwXPGKX2bIayG/0U6V3qVSmGQnB1EoO+oXvPz2UVDfqVfFjUjH7QynvR7cmVQtRDbwOvlQAA==";
-    link.crossOrigin = "anonymous";
     document.head.appendChild(link);
   }, []);
 
